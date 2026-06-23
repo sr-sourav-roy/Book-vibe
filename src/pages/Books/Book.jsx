@@ -1,22 +1,25 @@
+import { IoStarHalf } from "react-icons/io5";
 const Book = ({ singleData }) => {
-  const { bookName, author, image, category } = singleData;
+  const { bookName, author, image, category, rating } = singleData;
   return (
-    <div className="card bg-base-100 border border-gray-300 mb-10 pt-6">
-      <figure className="w-9/12 p-10 ml-13 shadow-2xl bg-[#F3F3F3]">
-        <img src={image} alt="Shoes" />
+    <div className="card bg-base-100 w-96 shadow-sm p-10 border border-gray-200">
+      <figure className="p-6 bg-gray-100">
+        <img className="h-[180px]" src={image} alt="Shoes" />
       </figure>
-      <div className="card-body ml-10">
+      <div className="card-body">
         <h2 className="card-title">
-          Card Title
-          <div className="badge badge-secondary">{category}</div>
+          {bookName}
+          <div className="badge badge-secondary">NEW</div>
         </h2>
-        <div>
-          <h2>{bookName}</h2>
-          <p>{author}</p>
-        </div>
+        <p>
+          A card component has a figure, a body part, and inside body there are
+          title and actions parts
+        </p>
         <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
+          <div className="badge badge-outline">{category}</div>
+          <div className="badge badge-outline">
+            {rating} <IoStarHalf />
+          </div>
         </div>
       </div>
     </div>
