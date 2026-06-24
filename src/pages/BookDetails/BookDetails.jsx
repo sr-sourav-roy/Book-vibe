@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router";
+import { addToStoreBD } from "../../Utility/AddToBD";
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -17,6 +18,15 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = singleBooks;
+
+  const handleMarkAsRead = (id) => {
+    //store with id
+    // whare to store
+    //array of collections
+    //if already exist the show a alart
+    // if book not exist then push in the collection or array
+    addToStoreBD(id);
+  };
   return (
     <div className="card lg:card-side mt-20 p-3 ">
       <div className="lg:w-1/2 ">
@@ -67,9 +77,11 @@ const BookDetails = () => {
           </div>
         </div>
         <div className="flex mt-1 gap-3">
-          <button className="btn btn-sm ">Read</button>
+          <button onClick={() => handleMarkAsRead(id)} className="btn btn-sm ">
+            Mar as Read
+          </button>
           <button className="btn btn-sm text-white bg-[#50B1C9]">
-            Wishlist
+            add To Wishlist
           </button>
         </div>
       </div>
