@@ -23,6 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/bookDetails/:id",
+        loader: () => fetch("bookAll.json"),
         Component: BookDetails,
       },
     ],

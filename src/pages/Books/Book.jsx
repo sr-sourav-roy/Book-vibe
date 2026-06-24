@@ -19,8 +19,8 @@ const Book = ({ singleData }) => {
         </figure>
         <div className="card-body">
           <div className="flex justify-center gap-10">
-            {tags.map((tag) => (
-              <batton>{tag}</batton>
+            {tags.map((tag, index) => (
+              <span key={index}>{tag}</span>
             ))}
           </div>
           <h2 className="card-title">
