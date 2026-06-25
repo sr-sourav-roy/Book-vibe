@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <div>
-      <h1>Hellow about</h1>
+    <div className="mt-10 flex items-center justify-center gap-2.5">
+      <div className="status status-info animate-bounce"></div> Note Found About
     </div>
   );
 };

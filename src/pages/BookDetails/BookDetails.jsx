@@ -36,12 +36,12 @@ const BookDetails = () => {
           alt="image"
         />
       </div>
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <h2 className="font-semibold text-2xl">{bookName}</h2>
         <p className="font-medium">By: {author}</p>
-        <div className="divider w-[500px]"></div>
+        <div className="divider lg:w-[500px]"></div>
         <p className="mt-0 mb-0 font-medium">{category}</p>
-        <div className="divider w-[500px]"></div>
+        <div className="divider lg:w-[500px]"></div>
         <small>
           {" "}
           <span className="font-medium">Review:</span> {review}
@@ -54,7 +54,7 @@ const BookDetails = () => {
             ))}
           </div>
         </div>
-        <div className="divider w-[500px]"></div>
+        <div className="divider lg:w-[500px]"></div>
         {/* rating styles>>>>>>>>>>>>>>>>>>>>>>>>> */}
         <div className="flex gap-3.5">
           <div className="text-gray-400">

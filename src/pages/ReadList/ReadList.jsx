@@ -3,7 +3,9 @@ import { useLoaderData } from "react-router";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoreBook } from "../../Utility/AddToBD";
-import Book from "../Books/Book";
+
+import Read from "./Read";
+import WishList from "../WIshList/WishList";
 
 const ReadList = () => {
   const [readList, setReadList] = useState([]);
@@ -26,13 +28,12 @@ const ReadList = () => {
         </TabList>
 
         <TabPanel>
-          {/* <h2>Any Readlist: {readList.length}</h2> */}
           {readList.map((b) => (
-            <Book key={b.bookId} singleData={b}></Book>
+            <Read key={b.bookId} b={b}></Read>
           ))}
         </TabPanel>
         <TabPanel>
-          <h2>Any Wishlist</h2>
+          <WishList></WishList>
         </TabPanel>
       </Tabs>
     </div>
