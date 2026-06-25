@@ -1,6 +1,11 @@
 import { useLoaderData, useParams } from "react-router";
 import { addToStoreBD } from "../../Utility/AddToBD";
 
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
+
 const BookDetails = () => {
   const { id } = useParams();
   const bookId = parseInt(id);
@@ -25,6 +30,13 @@ const BookDetails = () => {
     //array of collections
     //if already exist the show a alart
     // if book not exist then push in the collection or array
+
+    MySwal.fire({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success",
+    });
+
     addToStoreBD(id);
   };
   return (
