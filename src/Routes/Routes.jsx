@@ -24,12 +24,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "/readList",
-        loader: () => fetch("bookAll.json"),
+        loader: () => fetch("/bookAll.json"),
         Component: ReadList,
       },
       {
         path: "/bookDetails/:id",
-        loader: () => fetch("bookAll.json"),
+        loader: () => fetch("/bookAll.json"),
         Component: BookDetails,
       },
     ],
